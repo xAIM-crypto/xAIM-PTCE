@@ -1,9 +1,35 @@
 # Predictive Triadic Consensus Engine (PTCE)
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x400?text=PTCE+Architecture" alt="PTCE Architecture Diagram" width="800px" />
-  <p><em>Figure 1: PTCE Architecture Overview</em></p>
-</div>
+## PTCE Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                  PREDICTIVE TRIADIC CONSENSUS ENGINE            │
+├─────────────┬─────────────────────────────────┬─────────────────┤
+│             │                                 │                 │
+│  LLM 1      │           LLM 2                │     LLM 3       │
+│ (ChatGPT)   │         (DeepSeek)             │    (Grok)       │
+│             │                                 │                 │
+│ Creativity  │  Technical Accuracy            │  Performance    │
+│             │                                 │                 │
+├─────────────┴─────────────────────────────────┴─────────────────┤
+│                                                                 │
+│                     INTERACTIVE DISCUSSION                      │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                  CONFIDENCE-WEIGHTED CONSENSUS                  │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   PREDICTIVE FEATURE VECTORS                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                     BAYESIAN REFINEMENT                         │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -13,6 +39,7 @@
 - [Usage](#usage)
 - [Evaluation](#evaluation)
 - [Future Work](#future-work)
+- [Getting Started](#getting-started)
 
 ## Introduction
 
@@ -48,10 +75,55 @@ The LLMs engage in a simulated discussion, sharing their evaluations and potenti
 - Leverage the strengths of each specialized model
 - Produce more robust final evaluations
 
-<div align="center">
-  <img src="https://via.placeholder.com/700x300?text=Interactive+Discussion+Flow" alt="Interactive Discussion Flow" width="700px" />
-  <p><em>Figure 2: Interactive Discussion Process</em></p>
-</div>
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│  LLM 1 (ChatGPT)│     │ LLM 2 (DeepSeek)│     │  LLM 3 (Grok)  │
+│                 │     │                 │     │                 │
+└────────┬────────┘     └────────┬────────┘     └────────┬────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                     INITIAL EVALUATIONS                         │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                  VARIANCE CALCULATION                           │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────┴──────────────┐
+                  │                             │
+                  ▼                             ▼
+┌─────────────────────────┐         ┌─────────────────────────────┐
+│                         │         │                             │
+│  HIGH DISAGREEMENT      │         │  AGREEMENT ACHIEVED         │
+│  (Variance > Threshold) │         │  (Variance <= Threshold)    │
+│                         │         │                             │
+└────────────┬────────────┘         └─────────────────────────────┘
+             │                                     │
+             ▼                                     │
+┌─────────────────────────┐                        │
+│                         │                        │
+│  ADDITIONAL DISCUSSION  │                        │
+│  ROUND                  │                        │
+│                         │                        │
+└────────────┬────────────┘                        │
+             │                                     │
+             └─────────────────┬──────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                     FINAL EVALUATIONS                           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### 4. Consensus Building and Aggregation
 
@@ -76,10 +148,48 @@ Beyond present evaluation, PTCE incorporates predictive elements to forecast fut
 
 ## Architecture
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x500?text=PTCE+Workflow" alt="PTCE Workflow Diagram" width="800px" />
-  <p><em>Figure 3: PTCE Workflow</em></p>
-</div>
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                       INPUT PROCESSING                          │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                     INITIAL EVALUATION                          │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                   INTERACTIVE DISCUSSION                        │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                    CONSENSUS BUILDING                           │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                  PREDICTIVE INTEGRATION                         │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                   WINNER DETERMINATION                          │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 The PTCE system follows a sequential workflow:
 
@@ -130,10 +240,55 @@ The system detects high disagreement between LLMs by calculating the variance of
 - Evaluations converge toward consensus through iterative refinement
 - Confidence scores increase after successful discussion rounds
 
-<div align="center">
-  <img src="https://via.placeholder.com/600x400?text=Conflict+Resolution+Process" alt="Conflict Resolution Process" width="600px" />
-  <p><em>Figure 4: Conflict Resolution Process</em></p>
-</div>
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                     INITIAL EVALUATIONS                         │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                  CALCULATE VARIANCE                             │
+│                                                                 │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+                  ┌──────────────┴──────────────┐
+                  │                             │
+                  ▼                             ▼
+┌─────────────────────────┐         ┌─────────────────────────────┐
+│                         │         │                             │
+│  VARIANCE > THRESHOLD   │         │  VARIANCE <= THRESHOLD      │
+│                         │         │                             │
+└────────────┬────────────┘         └─────────────┬───────────────┘
+             │                                     │
+             ▼                                     │
+┌─────────────────────────┐                        │
+│                         │                        │
+│  ADJUST SCORES TOWARD   │                        │
+│  MEAN                   │                        │
+│                         │                        │
+└────────────┬────────────┘                        │
+             │                                     │
+             ▼                                     │
+┌─────────────────────────┐                        │
+│                         │                        │
+│  INCREASE CONFIDENCE    │                        │
+│  SCORES                 │                        │
+│                         │                        │
+└────────────┬────────────┘                        │
+             │                                     │
+             └─────────────────┬──────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                     FINAL EVALUATIONS                           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ## Usage
 
@@ -150,7 +305,9 @@ This is a provisional implementation of PTCE. To integrate it into your project:
 |----------|--------|-------------|
 | `/api/ptce/health` | GET | Check if the service is running |
 | `/api/ptce/determine-winner` | POST | Determine winner between two model objects |
+| `/api/ptce/determine-winner-detailed` | POST | Determine winner with detailed LLM interactions |
 | `/api/ptce/determine-winner-by-ids` | POST | Determine winner between two models by their IDs |
+| `/api/ptce/determine-winner-by-ids-detailed` | POST | Determine winner by IDs with detailed LLM interactions |
 
 ### Example API Response
 
@@ -185,10 +342,21 @@ The PTCE system will be evaluated through several experiments:
 3. **Conflict Resolution Efficacy**: Assessing how well the system handles disagreements
 4. **Predictive Accuracy**: Evaluating forecasting capability with F1 score metrics
 
-<div align="center">
-  <img src="https://via.placeholder.com/700x400?text=Expected+Performance+Comparison" alt="Expected Performance Comparison" width="700px" />
-  <p><em>Figure 5: Expected Performance Comparison (Projected)</em></p>
-</div>
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                  EXPECTED PERFORMANCE COMPARISON                │
+│                                                                 │
+├─────────────────┬─────────────────────────────┬─────────────────┤
+│                 │                             │                 │
+│  Individual LLM │      Simple Averaging       │      PTCE       │
+│                 │                             │                 │
+├─────────────────┼─────────────────────────────┼─────────────────┤
+│                 │                             │                 │
+│     Baseline    │        +5-10% Gain          │   +15-20% Gain  │
+│                 │                             │                 │
+└─────────────────┴─────────────────────────────┴─────────────────┘
+```
 
 Based on theoretical analysis, we anticipate PTCE to demonstrate approximately 15% improvement in accuracy over individual LLMs.
 
@@ -201,6 +369,16 @@ This implementation is provisional and several enhancements are planned:
 - Development of a more sophisticated Bayesian inference layer for refinement
 - Implementation of an adaptive confidence threshold for discussion triggering
 - Enhanced visualization of the decision-making process for transparency
+
+## Getting Started
+
+For detailed instructions on how to set up, run, and test the PTCE implementation, please refer to the [HOW_IT_WORKS.md](HOW_IT_WORKS.md) file. This guide provides step-by-step instructions for:
+
+- Setting up the development environment
+- Configuring the necessary API keys
+- Running the database migrations
+- Testing the API endpoints
+- Troubleshooting common issues
 
 ---
 
