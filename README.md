@@ -7,10 +7,10 @@
 │                  PREDICTIVE TRIADIC CONSENSUS ENGINE            │
 ├─────────────┬─────────────────────────────────┬─────────────────┤
 │             │                                 │                 │
-│  LLM 1      │           LLM 2                │     LLM 3       │
-│ (ChatGPT)   │         (DeepSeek)             │    (Grok)       │
+│  LLM 1      │           LLM 2                 │     LLM 3       │
+│ (ChatGPT)   │         (DeepSeek)              │    (Grok)       │
 │             │                                 │                 │
-│ Creativity  │  Technical Accuracy            │  Performance    │
+│ Creativity  │  Technical Accuracy             │  Performance    │
 │             │                                 │                 │
 ├─────────────┴─────────────────────────────────┴─────────────────┤
 │                                                                 │
@@ -78,7 +78,7 @@ The LLMs engage in a simulated discussion, sharing their evaluations and potenti
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │                 │     │                 │     │                 │
-│  LLM 1 (ChatGPT)│     │ LLM 2 (DeepSeek)│     │  LLM 3 (Grok)  │
+│  LLM 1 (ChatGPT)│     │ LLM 2 (DeepSeek)│     │  LLM 3 (Grok)   │
 │                 │     │                 │     │                 │
 └────────┬────────┘     └────────┬────────┘     └────────┬────────┘
          │                       │                       │
@@ -115,7 +115,7 @@ The LLMs engage in a simulated discussion, sharing their evaluations and potenti
 │                         │                        │
 └────────────┬────────────┘                        │
              │                                     │
-             └─────────────────┬──────────────────┘
+             └─────────────────┬───────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
@@ -263,23 +263,23 @@ The system detects high disagreement between LLMs by calculating the variance of
 │  VARIANCE > THRESHOLD   │         │  VARIANCE <= THRESHOLD      │
 │                         │         │                             │
 └────────────┬────────────┘         └─────────────┬───────────────┘
-             │                                     │
-             ▼                                     │
-┌─────────────────────────┐                        │
-│                         │                        │
-│  ADJUST SCORES TOWARD   │                        │
-│  MEAN                   │                        │
-│                         │                        │
-└────────────┬────────────┘                        │
-             │                                     │
-             ▼                                     │
-┌─────────────────────────┐                        │
-│                         │                        │
-│  INCREASE CONFIDENCE    │                        │
-│  SCORES                 │                        │
-│                         │                        │
-└────────────┬────────────┘                        │
-             │                                     │
+             │                                    │
+             ▼                                    │
+┌─────────────────────────┐                       │
+│                         │                       │
+│  ADJUST SCORES TOWARD   │                       │
+│  MEAN                   │                       │
+│                         │                       │
+└────────────┬────────────┘                       │
+             │                                    │
+             ▼                                    │
+┌─────────────────────────┐                       │
+│                         │                       │
+│  INCREASE CONFIDENCE    │                       │
+│  SCORES                 │                       │
+│                         │                       │
+└────────────┬────────────┘                       │
+             │                                    │
              └─────────────────┬──────────────────┘
                                │
                                ▼
