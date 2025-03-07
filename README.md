@@ -139,15 +139,24 @@ The system detects high disagreement between LLMs by calculating the variance of
 
 This is a provisional implementation of PTCE. To integrate it into your project:
 
-1. Ensure you have proper API access to the LLMs (ChatGPT, DeepSeek, and Grok)
+1. Ensure you have proper API access to the LLMs (currently using OpenAI API)
 2. Initialize the models to be evaluated with the required attributes
 3. Call the PTCE evaluation endpoint with the models to compare
 4. Process the response containing the winner and detailed scoring information
 
-Example API response:
+### API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/ptce/health` | GET | Check if the service is running |
+| `/api/ptce/determine-winner` | POST | Determine winner between two model objects |
+| `/api/ptce/determine-winner-by-ids` | POST | Determine winner between two models by their IDs |
+
+### Example API Response
 
 ```json
 {
+  "matchId": "550e8400-e29b-41d4-a716-446655440000",
   "winner": {
     "id": "model123",
     "name": "ChampionModel"
@@ -160,6 +169,12 @@ Example API response:
   "reasoning": "Initial disagreement detected (variance: model1=1.25, model2=1.75). After discussion, the evaluations were refined."
 }
 ```
+
+### OpenAI API Compatibility
+
+The current implementation uses OpenAI's API for all three LLM roles. It requires a model that supports the JSON response format. By default, it uses `gpt-4o-mini`. If you want to use a different model, you may need to modify the `openai-service.ts` file.
+
+For detailed setup and testing instructions, please refer to the [HOW_IT_WORKS.md](HOW_IT_WORKS.md) file.
 
 ## Evaluation
 
