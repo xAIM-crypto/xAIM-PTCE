@@ -40,7 +40,7 @@
 - [Evaluation](#evaluation)
 - [Future Work](#future-work)
 - [Getting Started](#getting-started)
-
+ 
 ## Introduction
 
 The Predictive Triadic Consensus Engine (PTCE) is an advanced decision-making system that leverages multiple Large Language Models (LLMs) in a collaborative framework to produce more robust and accurate evaluations than any single model could achieve alone. PTCE forms the core of TMOF (Tournament Model Optimization Framework), enhancing the process for determining tournament winners through a structured, multi-model approach.
